@@ -129,6 +129,13 @@ section[id],footer[id]{scroll-margin-top:84px}
 .hw-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(5,auto);column-gap:48px!important;row-gap:0!important}.hw-col{grid-row:span 5;display:grid!important;grid-template-rows:subgrid;gap:0!important}.hw-col>p{margin-bottom:12px!important}.hw-ul{display:contents}@media (max-width:700px){.hw-grid{grid-template-columns:1fr;grid-template-rows:none;row-gap:32px!important}.hw-col{grid-row:auto;display:flex!important;grid-template-rows:none}.hw-ul{display:block}}
 .ph{display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;box-sizing:border-box;border:1.5px dashed #CFCBD4;border-radius:12px;background:#F3F1EF;color:#5B5763;font-size:15px;line-height:1.5}
 .sk-hdr-case .sk-av{animation:none !important;opacity:1;transform:none}.sk-hdr-case .sk-mono{animation:none !important;opacity:0}
+.cs-next{position:fixed;right:max(24px, env(safe-area-inset-right, 0px));bottom:max(24px, env(safe-area-inset-bottom, 0px));z-index:30;display:inline-flex;align-items:center;gap:12px;padding:8px 8px 8px 20px;border-radius:999px;background:#FFFFFF;border:1px solid #E4E2E6;box-shadow:0 12px 32px rgba(18,28,59,.12);font-size:15px;font-weight:500;color:#111113;text-decoration:none;transition:border-color .2s,box-shadow .2s}
+.cs-next .cs-k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#8E8A93}
+.cs-next .cs-ar{width:32px;height:32px;border-radius:50%;background:#121C3B;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;transition:transform .25s}
+.cs-next:hover{border-color:#C9C3EE;box-shadow:0 14px 36px rgba(75,63,160,.18);color:#111113}.cs-next:hover .cs-ar{transform:translateX(3px)}
+@supports (animation-timeline: scroll()){@keyframes csIn{from{opacity:0;transform:translateY(16px);visibility:hidden}to{opacity:1;transform:none;visibility:visible}}.cs-next{animation:csIn linear both;animation-timeline:scroll(root);animation-range:320px 520px}}
+@media (max-width:560px){.cs-next{right:16px;bottom:16px;font-size:14px;padding-left:14px}.cs-x{display:none}}
+@media (prefers-reduced-motion: reduce){.cs-next .cs-ar{transition:none}}
 .rc-range{-webkit-appearance:none;appearance:none;background:transparent;cursor:ew-resize}
 @keyframes rcClip{0%,18%{clip-path:inset(0 0 0 88%)}46%,68%{clip-path:inset(0 0 0 12%)}92%,100%{clip-path:inset(0 0 0 88%)}}
 @keyframes rcHandle{0%,18%{left:88%}46%,68%{left:12%}92%,100%{left:88%}}
@@ -216,29 +223,29 @@ section[id],footer[id]{scroll-margin-top:84px}
 <h2 style="margin: 16px 0 0; max-width: 900px; font-size: clamp(28px, 3.4vw, 48px); line-height: 1.08; font-weight: 400; letter-spacing: -0.035em; text-wrap: balance"><span style="color: #8E8A93">I’ve led design for whole lines of business,</span> and built the teams to do it.</h2>
 <p style="margin: 24px 0 0; max-width: 720px; font-size: 18px; line-height: 1.55; color: #2A2A2E">10+ years designing products, the last 6 leading teams at Dialpad and Rappi, across B2B SaaS and B2C. Alignment and shared context are how my teams move faster with quality.</p>
 <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 24px">
-<div style="flex: 1 1 420px; min-width: 0; padding: 28px; background: #FFFFFF; border: 1px solid #E4E2E6; border-radius: 20px; display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px"><span style="font-size: 20px; font-weight: 600; letter-spacing: -0.01em">Dialpad · Product Design Manager</span><span style="font-size: 14px; color: #8E8A93">2023 – 2026</span></div>
-<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px">
-<div><span style="display: block; font-size: clamp(48px, 5vw, 72px); font-weight: 300; letter-spacing: -0.05em; line-height: 1; color: #121C3B">1<span style="color: #C9CBD6">→</span>9</span><span style="display: block; margin-top: 8px; font-size: 15px; color: #3F3D45">designers on my team</span></div>
+<div style="flex: 1 1 420px; min-width: 0; padding: 22px; background: #FFFFFF; border: 1px solid #E4E2E6; border-radius: 16px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px"><span style="font-size: 16px; font-weight: 600; letter-spacing: -0.01em">Dialpad · Product Design Manager</span><span style="font-size: 12px; color: #8E8A93">2023 – 2026</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 13px 32px">
+<div><span style="display: block; font-size: clamp(38px, 4vw, 58px); font-weight: 300; letter-spacing: -0.05em; line-height: 1; color: #121C3B">1<span style="color: #C9CBD6">→</span>9</span><span style="display: block; margin-top: 6px; font-size: 13px; color: #3F3D45">designers on my team</span></div>
 <div class="st-div" aria-hidden="true"></div>
-<div><span style="display: block; font-size: clamp(48px, 5vw, 72px); font-weight: 300; letter-spacing: -0.05em; line-height: 1; color: rgb(180, 184, 199)">12<span style="color: rgb(221, 223, 230)">→</span>30+</span><span style="display: block; margin-top: 8px; font-size: 15px; color: rgb(63, 61, 69)">design org I helped scale</span></div>
+<div><span style="display: block; font-size: clamp(38px, 4vw, 58px); font-weight: 300; letter-spacing: -0.05em; line-height: 1; color: rgb(180, 184, 199)">12<span style="color: rgb(221, 223, 230)">→</span>30+</span><span style="display: block; margin-top: 6px; font-size: 13px; color: rgb(63, 61, 69)">design org I helped scale</span></div>
 </div>
-<div style="display: flex; flex-direction: column; gap: 8px; margin-top: 14px">
-<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93">SCOPE · DIALPAD CONNECT</p>
-<p style="margin: 0; font-size: 17px; font-weight: 500; color: #111113">Calling<span aria-hidden="true" style="color: #C9CBD6"> · </span>Messaging<span aria-hidden="true" style="color: #C9CBD6"> · </span>Meetings<span aria-hidden="true" style="color: #C9CBD6"> · </span>Admin platform</p>
-<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #5B5763">The whole app, connected: SMB and Enterprise, agents and company admins, on desktop, mobile and rooms solutions.</p>
+<div style="display: flex; flex-direction: column; gap: 6px; margin-top: 11px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93">SCOPE · DIALPAD CONNECT</p>
+<p style="margin: 0; font-size: 14px; font-weight: 500; color: #111113">Calling<span aria-hidden="true" style="color: #C9CBD6"> · </span>Messaging<span aria-hidden="true" style="color: #C9CBD6"> · </span>Meetings<span aria-hidden="true" style="color: #C9CBD6"> · </span>Admin platform</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5B5763">The whole app, connected: SMB and Enterprise, agents and company admins, on desktop, mobile and rooms solutions.</p>
 </div>
 </div>
-<div style="flex: 1 1 420px; min-width: 0; padding: 28px; background: #FFFFFF; border: 1px solid #E4E2E6; border-radius: 20px; display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px"><span style="font-size: 20px; font-weight: 600; letter-spacing: -0.01em">Rappi · Product Design Director</span><span style="font-size: 14px; color: #8E8A93">2020 – 2023</span></div>
-<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 8px 28px">
-<div><span style="display: block; font-size: clamp(48px, 5vw, 72px); font-weight: 300; letter-spacing: -0.05em; line-height: 1; color: rgb(18, 28, 59)">2<span style="color: rgb(201, 203, 214)">→</span>10</span><span style="display: block; margin-top: 8px; font-size: 15px; color: rgb(63, 61, 69)">designers on my team</span></div>
+<div style="flex: 1 1 420px; min-width: 0; padding: 22px; background: #FFFFFF; border: 1px solid #E4E2E6; border-radius: 16px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px"><span style="font-size: 16px; font-weight: 600; letter-spacing: -0.01em">Rappi · Product Design Director</span><span style="font-size: 12px; color: #8E8A93">2020 – 2023</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 6px 22px">
+<div><span style="display: block; font-size: clamp(38px, 4vw, 58px); font-weight: 300; letter-spacing: -0.05em; line-height: 1; color: rgb(18, 28, 59)">2<span style="color: rgb(201, 203, 214)">→</span>10</span><span style="display: block; margin-top: 6px; font-size: 13px; color: rgb(63, 61, 69)">designers on my team</span></div>
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 8px; margin-top: 14px">
-<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93">SCOPE · FULFILLMENT</p>
-<p style="margin: 0; font-size: 17px; font-weight: 500; color: #111113">Courier app<span aria-hidden="true" style="color: #C9CBD6"> · </span>Shopper app<span aria-hidden="true" style="color: #C9CBD6"> · </span>Dark stores<span aria-hidden="true" style="color: #C9CBD6"> · </span>Forecasting</p>
-<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #5B5763">The whole logistics flow, from the moment a user places an order until it arrives, including deliveries in under 10 minutes.</p>
+<div style="display: flex; flex-direction: column; gap: 6px; margin-top: 11px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93">SCOPE · FULFILLMENT</p>
+<p style="margin: 0; font-size: 14px; font-weight: 500; color: #111113">Courier app<span aria-hidden="true" style="color: #C9CBD6"> · </span>Shopper app<span aria-hidden="true" style="color: #C9CBD6"> · </span>Dark stores<span aria-hidden="true" style="color: #C9CBD6"> · </span>Forecasting</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5B5763">The whole logistics flow, from the moment a user places an order until it arrives, including deliveries in under 10 minutes.</p>
 </div>
 </div>
 </div>
@@ -247,18 +254,18 @@ section[id],footer[id]{scroll-margin-top:84px}
 <div class="hw-col" style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
 <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93">ACROSS TEAMS &amp; STAKEHOLDERS</p>
 <ul class="hw-ul" style="list-style: none; margin: 0; padding: 0">
-<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Member of the design leadership team</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: #3F3D45">At Dialpad, one of the leads shaping the design org, with the Design System, Design Ops and Brand leads.</span></li>
+<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Member of the design leadership team</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: rgb(63, 61, 69)">At Dialpad, one of the 8 leads shaping the design org, with the Design System, Design Ops and Brand leads.</span></li>
 <li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Design’s voice at the table</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: #3F3D45">At Dialpad, with the Sr. Product Director, PMs and Engineering, and checkpoints with executive stakeholders. At Rappi, priorities with founders and VPs.</span></li>
-<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">The big picture</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: #3F3D45">Seeing how projects connect across areas and talking with the teams they touch. A design system as one experience, not just UI.</span></li>
-<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Sprints and hackathons</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: #3F3D45">Trained Design Sprint facilitator. I organize hackathons to keep experimentation part of how teams work.</span></li>
+<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">The big picture</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: rgb(63, 61, 69)">Seeing how projects connect across areas and talking with the teams they touch. A design system as one experience.</span></li>
+<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Sprints and hackathons</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: rgb(63, 61, 69)">Design Sprint facilitator. I organize hackathons to keep teams experimenting.</span></li>
 </ul>
 </div>
 <div class="hw-col" style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
 <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93">IN THE DAILY WORK</p>
 <ul class="hw-ul" style="list-style: none; margin: 0; padding: 0">
-<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Craft at speed</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: rgb(63, 61, 69)">Weekly design reviews with leadership, presentations and working sessions. High standards of craft, balanced with speed and execution.</span></li>
+<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Craft at speed</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: rgb(63, 61, 69)">Weekly design reviews with leadership. High standards of craft, balanced with speed and execution.</span></li>
 <li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Prototypes in code</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: #3F3D45">Still hands-on: a first concept in about an hour, then many iterations stakeholders could try.</span></li>
-<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Agents and skills</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: #3F3D45">A design skills library for the team, and agents I built to automate tasks across the process.</span></li>
+<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Agents and skills</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: rgb(63, 61, 69)">A skills library for the team, and agents that automate tasks.</span></li>
 <li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Paper-cut fixes in code</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: rgb(63, 61, 69)">I ship small, medium UX fixes straight to production.&nbsp;</span></li>
 </ul>
 </div>
@@ -407,7 +414,7 @@ section[id],footer[id]{scroll-margin-top:84px}
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: #E4E2E6; border: 1px solid #E4E2E6; border-radius: 14px; overflow: hidden">
 <div style="padding: 24px 26px; display: flex; flex-direction: column; gap: 10px; background: #FFFFFF"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">THE BET</p><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A2E"><strong style="font-weight: 600; color: #111113">Companion mode</strong>: a smaller version of Dialpad, focused on calling, that floats on top of the apps agents work in. They stay productive in their own tools, with Dialpad's AI one click away. For the business: more active users.</p></div>
 <div style="padding: 24px 26px; display: flex; flex-direction: column; gap: 10px; background: #FFFFFF"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">CHALLENGE</p><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">AI-powered communications have to be consistent everywhere. Features that live in different sections of the app had to come together in one small space, with a layout that adapts to what the user needs.</p></div>
-<div style="grid-column: 1 / -1; padding: 24px 26px; display: flex; flex-direction: column; gap: 10px; background: #FFFFFF"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">APPROACH</p><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">Build on the call bar. Parity first. Clean up code debt. Baby steps, with the big picture in mind.</p></div>
+<div style="grid-column: 1 / -1; padding: 24px 26px; display: flex; flex-direction: column; gap: 10px; background: #FFFFFF"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">APPROACH</p><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">Consistent with the calling experience, on a new repository. First feature parity with the current product, then incremental improvements.</p></div>
 </div>
 </div>
 </section>
@@ -430,42 +437,6 @@ section[id],footer[id]{scroll-margin-top:84px}
 </figure>
 </section>
 
-<!-- Foundation: call bar -->
-<section style="padding: 64px 0; border-top: 1px solid #E4E2E6; display: flex; flex-wrap: wrap; gap: 20px 72px">
-<p style="flex: 0 0 200px; margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #5B5763">ONE SYSTEM</p>
-<div style="flex: 1 1 520px; min-width: 0; max-width: 720px; display: flex; flex-direction: column; gap: 32px">
-<p style="margin: 0; font-size: 25px; line-height: 1.3; letter-spacing: -0.02em; font-weight: 500">The same pattern for every conversation: the call bar, and a meetings bar in the same style, on desktop, web, iOS and Android.</p>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">We redesigned the call bar two years earlier, with every main action and live AI in one bar. On iOS it meant a structural redesign that removed old code; Android followed. Engineers built UI kits and shared components for the main call actions, so every surface that uses them stays consistent.</p>
-<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
-<div style="padding: 24px 20px; border-radius: 16px; background: #F1EFEC">
-<img src="media/callbar-crop.png" alt="The call bar, close up: caller, Mute, Hold, Transfer, Record, AI On, Share, Park and End Call in one bar" style="display: block; width: 100%; height: auto; border-radius: 10px">
-</div>
-<figcaption style="font-size: 15px; color: #5B5763">Sample: the call bar, with the call controls and live AI in one place.</figcaption>
-</figure>
-<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; gap: 16px; align-items: flex-start">
-<img src="media/call-bar.webp" alt="The call bar on web: call actions and live AI in one bar, with the transcript beside the conversation" style="flex: 1534 1 0; min-width: 0; width: 100%; height: auto; display: block; border-radius: 12px">
-<img src="media/callbar-ios.png" alt="The call screen on iOS: transfer, hold, mute, park, record and keypad, with AI one tap away" style="flex: 461 1 0; min-width: 0; width: 100%; height: auto; display: block; border-radius: 16px">
-</div>
-<figcaption style="font-size: 15px; color: #5B5763">In context: on web, the call bar sits under the conversation; on mobile, the call controls are the screen itself.</figcaption>
-</figure>
-</div>
-</section>
-
-<!-- Stages -->
-<section style="padding: 64px 0; border-top: 1px solid #E4E2E6; display: flex; flex-wrap: wrap; gap: 20px 72px">
-<p style="flex: 0 0 200px; margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #5B5763">THE WHOLE CALL</p>
-<div style="flex: 1 1 520px; min-width: 0; max-width: 720px; display: flex; flex-direction: column; gap: 32px">
-<p style="margin: 0; font-size: 25px; line-height: 1.3; letter-spacing: -0.02em; font-weight: 500">V1 covers the call itself. I designed what comes before and after.</p>
-<p style="margin: -12px 0 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">So Companion can grow into the agent's whole workflow, in the CRM. Follow an agent at a credit card help center, on a call with Mathew.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
-<div style="background: #F7F5FB; border: 1.5px dashed #C9BEF5; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 10px"><span style="align-self: flex-start; padding: 4px 10px; border-radius: 999px; background: #EDE8FF; color: #4B3FA0; font-size: 12px; font-weight: 600">Designed</span><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">1 · BEFORE THE CALL</p><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #2A2A2E">She calls Mathew from Salesforce and picks the caller ID: the number and how it shows up.</p></div>
-<div style="background: #FFFFFF; border: 1px solid #E4E2E6; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 10px"><span style="align-self: flex-start; padding: 4px 10px; border-radius: 999px; background: #111113; color: #FFFFFF; font-size: 12px; font-weight: 600">In EAP</span><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">2 · DURING THE CALL</p><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #2A2A2E">Call controls, live transcript and playbooks float on top of the CRM, so she never leaves the customer’s record.</p></div>
-<div style="background: #F7F5FB; border: 1.5px dashed #C9BEF5; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 10px"><span style="align-self: flex-start; padding: 4px 10px; border-radius: 999px; background: #EDE8FF; color: #4B3FA0; font-size: 12px; font-weight: 600">Designed</span><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">3 · AFTER THE CALL</p><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #2A2A2E">The Deep Summary with action items lands in the CRM, ready to log.</p><a href="#case-recaps" style="margin-top: auto; font-size: 14px; font-weight: 600; color: #4B3FA0; text-decoration: none">From the AI Recaps case →</a></div>
-</div>
-</div>
-</section>
-
 <!-- Key decisions -->
 <section style="padding: 64px 0; border-top: 1px solid #E4E2E6; display: flex; flex-wrap: wrap; gap: 20px 72px">
 <p style="flex: 0 0 200px; margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #5B5763">KEY DECISIONS</p>
@@ -476,12 +447,43 @@ section[id],footer[id]{scroll-margin-top:84px}
 </div>
 <div>
 <h3 style="margin: 0; font-size: 18px; font-weight: 600">02 / Parity first, then integrations</h3>
-<p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">V1 matched what Dialpad Everywhere supported, plus AI transcript. Salesforce and other integrations came in the second stage.</p>
+<p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">First release matched what Dialpad Everywhere supported, plus AI transcript. Salesforce and other integrations came in the second stage.</p>
 </div>
 <div>
 <h3 style="margin: 0; font-size: 18px; font-weight: 600">03 / Re-align priorities to reach V1 faster</h3>
 <p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">A triad with the Lead PM and the Sr Calling Engineer, with checkpoints with the CPO and the Design Director. I iterated on their feedback, and we re-aligned business priorities to speed up the timeline to V1.</p>
 </div>
+<div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">04 / Design beyond first version</h3>
+<p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">Outbound calls and post-call are designed and planned, so Companion can grow into the agent’s whole workflow.</p>
+</div>
+</div>
+</section>
+
+<!-- Foundation: call bar -->
+<section style="padding: 64px 0; border-top: 1px solid #E4E2E6; display: flex; flex-wrap: wrap; gap: 20px 72px">
+<p style="flex: 0 0 200px; margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #5B5763">ONE SYSTEM</p>
+<div style="flex: 1 1 520px; min-width: 0; max-width: 720px; display: flex; flex-direction: column; gap: 32px">
+<p style="margin: 0; font-size: 25px; line-height: 1.3; letter-spacing: -0.02em; font-weight: 500">The same pattern for every conversation: the call bar, and a meetings bar in the same style, on desktop, web, iOS and Android.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">We redesigned the calling bar two years earlier, with every main action and live AI. On iOS it meant a structural redesign that removed old code; Android followed. Engineers built UI kits and shared components for the main call actions, so every surface that uses them stays consistent.</p>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="padding: 24px 20px; border-radius: 16px; background: #F1EFEC">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">CALLS</span>
+<img src="media/callbar-tight.png" alt="The call bar, close up: caller, Mute, Hold, Transfer, Record, AI On, Share, Park and End Call in one bar" style="display: block; width: 85%; height: auto; border-radius: 6px">
+<span style="margin-top: 18px; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">MEETINGS</span>
+<img src="media/meetings-bar.png" alt="The meetings bar: Details, Chat, Participants and AI on, then Mute, Stop video, Screen share, Reactions and More, then Stop, Host and Leave" style="display: block; width: 100%; height: auto; border-radius: 6px">
+</div>
+</div>
+<figcaption style="font-size: 15px; color: #5B5763">Calls and meetings share the same pattern: controls in the center, AI on one tap away, and the end action always in the same place.</figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 16px; align-items: flex-start">
+<img src="media/call-bar.webp" alt="The call bar on web: call actions and live AI in one bar, with the transcript beside the conversation" style="flex: 1534 1 0; min-width: 0; width: 100%; height: auto; display: block; border-radius: 12px">
+<img src="media/callbar-ios.png" alt="The call screen on iOS: transfer, hold, mute, park, record and keypad, with AI one tap away" style="flex: 461 1 0; min-width: 0; width: 100%; height: auto; display: block; border-radius: 16px">
+</div>
+<figcaption style="font-size: 15px; color: #5B5763">In context: on web, the call bar sits under the conversation; on mobile, the call controls are the screen itself.</figcaption>
+</figure>
 </div>
 </section>
 
@@ -498,6 +500,7 @@ section[id],footer[id]{scroll-margin-top:84px}
 </div>
 </section>
 
+<a class="cs-next" href="#case-recaps"><span>Next case</span><span class="cs-ar" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
 <!-- Next -->
 <footer style="padding: 56px 0; border-top: 1px solid #E4E2E6; display: flex; flex-wrap: wrap; gap: 8px 40px; align-items: center; justify-content: space-between">
 <a href="#" style="font-size: 17px; text-decoration: none; padding: 10px 0">Back to all cases</a>
@@ -627,6 +630,7 @@ section[id],footer[id]{scroll-margin-top:84px}
 </div>
 </section>
 
+<a class="cs-next" href="#case-rappi"><span>Next case</span><span class="cs-ar" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
 <!-- Next -->
 <footer style="padding: 56px 0; border-top: 1px solid #E4E2E6; display: flex; flex-wrap: wrap; gap: 8px 40px; align-items: center; justify-content: space-between">
 <a href="#" style="font-size: 17px; text-decoration: none; padding: 10px 0">Back to all cases</a>
@@ -673,6 +677,7 @@ section[id],footer[id]{scroll-margin-top:84px}
 </div>
 </section>
 
+<a class="cs-next" href="#case-companion"><span>Next case</span><span class="cs-ar" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
 <!-- Next -->
 <footer style="padding: 56px 0; border-top: 1px solid #E4E2E6; display: flex; flex-wrap: wrap; gap: 8px 40px; align-items: center; justify-content: space-between">
 <a href="#" style="font-size: 17px; text-decoration: none; padding: 10px 0">Back to all cases</a>
