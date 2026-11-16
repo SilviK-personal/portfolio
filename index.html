@@ -149,7 +149,8 @@ section[id],footer[id]{scroll-margin-top:84px}
 .rc-auto.rc-handle{animation:rcHandle 9s cubic-bezier(.65,0,.35,1) infinite}
 .rc-auto .rc-hint{animation:rcHint 1.6s ease-in-out infinite}
 @media (prefers-reduced-motion: reduce){.rc-auto.rc-after,.rc-auto.rc-handle,.rc-auto .rc-hint{animation:none}}
-.rp-case img{mix-blend-mode:multiply}
+.rp-fig img{mix-blend-mode:multiply}
+.rp-pgw{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 32px}@media (max-width:760px){.rp-pgw{grid-template-columns:1fr}}
 </style>
 <main class="view" id="view-home">
 <div style="font-family: 'DM Sans', sans-serif; color: #111113; background: #FBFBFA; min-height: 100vh">
@@ -210,13 +211,13 @@ section[id],footer[id]{scroll-margin-top:84px}
 
 <a href="#case-rappi" style="padding-top: 44px; border-top: 1px solid #E4E2E6; display: flex; flex-direction: row; flex-wrap: wrap; gap: 32px 64px; align-items: center; text-decoration: none">
 <span style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<span style="font-size: clamp(25px, 2.65vw, 36px); line-height: 1.06; letter-spacing: -0.035em"><span style="display: block; font-weight: 300; color: #8E8A93">+1M active couriers.</span><span style="display: block; font-weight: 700">A courier app that guides every step of the delivery.</span></span>
-<span style="font-size: 16px; line-height: 1.55; color: #3F3D45">From getting an order to the hand-off: heatmaps, clearer notifications, store photos, smarter routes and faster deliveries.</span>
+<span style="font-size: clamp(25px, 2.65vw, 36px); line-height: 1.06; letter-spacing: -0.035em"><span style="display: block; font-weight: 300; color: #8E8A93">Reducing GMV lost to stock-outs.</span><span style="display: block; font-weight: 700">Grocery shopping for someone else, without asking at every step.</span></span>
+<span style="font-size: 16px; line-height: 1.55; color: #3F3D45">Customers choose a replacement before a product runs out, and shoppers get live feedback instead of chat.</span>
 <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: #8E8A93">RAPPI · DESIGN DIRECTOR · 2022</span>
 <span style="align-self: flex-start; margin-top: 4px; font-size: 16px; font-weight: 500; border-bottom: 1.5px solid rgb(17, 17, 19); padding-bottom: 2px">Read the case</span>
 
 </span>
-<img src="media/rappi-heatmap.jpg" alt="Rappi courier app: demand heatmap at city and street scale" style="flex: 1.2 1 360px; max-width: 480px; min-width: 0; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center top; border-radius: 20px; background: #FFFFFF; border: 1px solid #E4E2E6; display: block">
+<img src="media/g-hero2.jpg" alt="Rappi shopper app: a shopping list and a product detail" style="flex: 1.2 1 360px; max-width: 480px; min-width: 0; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center top; border-radius: 20px; background: #FFFFFF; border: 1px solid #E4E2E6; display: block">
 </a>
 
 </div>
@@ -433,10 +434,10 @@ section[id],footer[id]{scroll-margin-top:84px}
 <span style="justify-self: start; padding: 4px 10px; background: #111113; color: #FFFFFF; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap">Companion mode</span>
 <p style="grid-column: 1 / -1; justify-self: stretch; margin: 8px 0 0; padding-top: 16px; border-top: 1px solid #DEDAD5; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">COMPACT</p>
 <img src="media/companion-old-compact.png" alt="The current Dialpad Companion, compact: a small pill with the phone number, call time and a hang-up button" style="display: block; width: 100%; max-width: 300px; height: auto; border-radius: 12px">
-<img src="media/companion-compact.png" alt="Companion mode, compact view: caller details and call controls only" style="display: block; width: 100%; max-width: 300px; height: auto; border-radius: 12px">
+<img src="media/companion-compact.png" alt="Companion mode, compact view: caller details and call controls only" style="display: block; width: 100%; max-width: 270px; height: auto; border-radius: 12px">
 <p style="grid-column: 1 / -1; justify-self: stretch; margin: 8px 0 0; padding-top: 16px; border-top: 1px solid #DEDAD5; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">FULL</p>
 <div style="align-self: start; width: 100%; display: flex; justify-content: center"><img src="media/companion-old.png" alt="The current Dialpad Companion: round call buttons, a row of integration icons and a basic transcript panel" style="display: block; width: 100%; max-width: 230px; height: auto; border-radius: 12px"></div>
-<div style="align-self: start; width: 100%; display: flex; justify-content: center"><img src="media/companion-full.png" alt="Companion mode, full view: caller details, call controls, AI on and a live AI transcript" style="display: block; width: 100%; max-width: 300px; height: auto; border-radius: 12px"></div>
+<div style="align-self: start; width: 100%; display: flex; justify-content: center"><img src="media/companion-full.png" alt="Companion mode, full view: caller details, call controls, AI on and a live AI transcript" style="display: block; width: 100%; max-width: 270px; height: auto; border-radius: 12px"></div>
 </div>
 <figcaption style="font-size: 15px; color: #5B5763">Not a reskin: Companion was rebuilt from the code up, on a modern front-end stack, to bring the call bar's controls and AI wherever the agent works.</figcaption>
 </figure>
@@ -651,7 +652,7 @@ section[id],footer[id]{scroll-margin-top:84px}
 <!-- Next -->
 <footer style="padding: 56px 0; border-top: 1px solid #E4E2E6; display: flex; flex-wrap: wrap; gap: 8px 40px; align-items: center; justify-content: space-between">
 <a href="#" style="font-size: 17px; text-decoration: none; padding: 10px 0">Back to all cases</a>
-<a href="#case-rappi" style="display: inline-flex; align-items: center; gap: 10px; font-size: 17px; text-decoration: none; padding: 10px 0">Next case: Rappi courier app
+<a href="#case-rappi" style="display: inline-flex; align-items: center; gap: 10px; font-size: 17px; text-decoration: none; padding: 10px 0">Next case: Rappi groceries
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
 </a>
 </footer>
@@ -682,16 +683,63 @@ section[id],footer[id]{scroll-margin-top:84px}
 </nav>
 </header>
 
-<!-- Case (imported from the original Figma case) -->
-<section style="padding: 16px 0 64px">
-<div class="rp-case" style="max-width: 960px; margin: 0 auto; border-radius: 20px; overflow: hidden">
-<img src="media/rappi-pdf-1.jpg" alt="Couriers App, the largest last-mile delivery app in LATAM. Objective: guide the courier through the end-to-end delivery experience to be productive and keep them engaged; more than 1M active users. TL;DR: guide each step to optimize delivery times; logistics UX across the delivery; we became couriers, designed, tested and iterated; KPIs: earnings per hour, defect rate, churn, idle time." loading="lazy" style="display: block; width: 100%; height: auto">
-<img src="media/rappi-pdf-2.jpg" alt="Orders assigned: couriers who got no orders thought the app was broken and churned in 7–10 days. Goal: keep them connected in high-demand areas. What: a demand heatmap at city and street scale. Then the E2E delivery process: order notification, go to store, in store, go to user, delivery, with up to 2 extra orders." loading="lazy" style="display: block; width: 100%; height: auto">
-<img src="media/rappi-pdf-3.jpg" alt="Notification: 5% of couriers did not use auto-accept, plus cancellations and rejections. Goal: fewer defects and accept on first assignment. What: a new notification system with map, earnings, distance and instructions, A/B tested; auto-accept for prioritized couriers." loading="lazy" style="display: block; width: 100%; height: auto">
-<img src="media/rappi-pdf-4.jpg" alt="Navigation: delays finding the store and changed routes. Goal: lower end-to-end time, defects and support contacts. What: store photo and instructions, and A/B tests explaining the suggested route (up to 33% faster)." loading="lazy" style="display: block; width: 100%; height: auto">
-<img src="media/rappi-pdf-5.jpg" alt="Order flow: store check-in code validation that works only in the store, and step-by-step pickup. Delivery: time lost finding addresses; door drop-off and hand delivery looked the same." loading="lazy" style="display: block; width: 100%; height: auto">
-<img src="media/rappi-pdf-6.jpg" alt="Delivery screens: hand-to-hand with cash, lobby drop-off with photo, and code validation. Fulfillment product design project, courier delivery experience." loading="lazy" style="display: block; width: 100%; height: auto">
+<!-- Hero -->
+<section style="padding: 40px 0 24px">
+<p style="margin: 0; font-size: clamp(12px, 1vw, 14px); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #8E8A93">Rappi · Fulfillment · Shopper app</p>
+<h1 style="margin: 28px 0 0; font-size: clamp(31px, 3.74vw, 53px); line-height: 1.06; letter-spacing: -0.04em; color: #A0979A"><span style="display: block; font-weight: 300">Reducing GMV lost to stock-outs.</span><span style="display: block; font-weight: 700; color: #111113">Grocery shopping for someone else, without asking at every step.</span></h1>
+</section>
+
+<!-- Intro -->
+<section style="padding: 24px 0 64px; display: flex; flex-wrap: wrap; gap: 40px 64px; align-items: center">
+<div style="flex: 1 1 380px; min-width: 0; max-width: 520px; display: flex; flex-direction: column; gap: 28px; font-size: 19px; line-height: 1.45">
+<p style="margin: 0">Grocery shopping feels simple when it’s for yourself. When you shop for someone else, every out-of-stock product becomes a decision.</p>
+<p style="margin: 0">The objective: guide shoppers to find suitable replacements based on the customer’s preferences, and make confident decisions through the whole shopping process, without asking the customer about every product.</p>
 </div>
+<img src="media/g-hero2.jpg" alt="Rappi shopper app: a shopping list for two orders and a product detail with the customer's comment, unit price, EAN and PLU" style="flex: 1.2 1 400px; min-width: 0; max-width: 480px; width: 100%; height: auto; display: block; border-radius: 20px">
+</section>
+
+<!-- TL;DR -->
+<section style="padding: 48px 0 64px; border-top: 1px solid #E4E2E6; display: flex; flex-wrap: wrap; gap: 20px 72px">
+<p style="flex: 0 0 200px; margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #5B5763">TL;DR</p>
+<div style="flex: 1 1 520px; min-width: 0; max-width: 720px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: #E4E2E6; border: 1px solid #E4E2E6; border-radius: 14px; overflow: hidden">
+<div style="padding: 24px 26px; display: flex; flex-direction: column; gap: 10px; background: #FFFFFF"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">THE BET</p><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A2E"><strong style="font-weight: 600; color: #111113">Decide before it runs out.</strong> Customers choose what to do if a product is out of stock, so shoppers don’t have to stop and ask.</p></div>
+<div style="padding: 24px 26px; display: flex; flex-direction: column; gap: 10px; background: #FFFFFF"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">CHALLENGE</p><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A2E"><strong style="font-weight: 600; color: #111113">Better experience, less GMV lost.</strong> Improve the experience for customers and shoppers, and reduce the GMV lost to stock-outs.</p></div>
+<div style="grid-column: 1 / -1; padding: 24px 26px; display: flex; flex-direction: column; gap: 10px; background: #FFFFFF"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">APPROACH</p><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A2E"><strong style="font-weight: 600; color: #111113">We became shoppers.</strong> We changed the logistics of picking, the shoppers’ mindset and the customer approval flow, through a deep design process and many design reviews with stakeholders. KPIs: GMV lost, defect rate, cancellations and picking time.</p></div>
+</div>
+</div>
+</section>
+
+<!-- Case sections -->
+<section style="padding: 56px 0; border-top: 1px solid #E4E2E6; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; gap: 20px 72px">
+<p style="flex: 0 0 200px; margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #5B5763">01 · SUBSTITUTIONS</p>
+<div style="flex: 1 1 520px; min-width: 0; max-width: 720px; display: flex; flex-direction: column; gap: 20px">
+<h3 style="margin: 0; font-size: 25px; line-height: 1.3; letter-spacing: -0.02em; font-weight: 500">The customer chooses a replacement before the product runs out.</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">Based on Rappi’s inventory in the store, we ask the customer to choose an option in case the product is out of stock.</p>
+</div>
+</div>
+<figure class="rp-fig" style="margin: 0; max-width: 1000px; width: 100%; align-self: center"><div style="display: flex; flex-wrap: wrap; gap: 24px 40px; align-items: center; justify-content: center"><div style="flex: 0 1 640px; min-width: 0"><img src="media/g-sub2.jpg" alt="When adding a product with few units left, the customer chooses: replace it with a suggested product, let the shopper choose, or get a refund" loading="lazy" style="display: block; width: 100%; height: auto; "></div><div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 18px"><div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">REPLACEMENT</p><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #2A2A2E">A suggested product the customer can accept.</p></div><div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">CHOOSE ONE FOR ME</p><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #2A2A2E">The shopper picks a replacement if the customer doesn’t answer.</p></div><div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">REFUND</p><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #2A2A2E">The customer prefers to get the money back.</p></div></div></div></figure>
+</section>
+<section style="padding: 56px 0; border-top: 1px solid #E4E2E6; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; gap: 20px 72px">
+<p style="flex: 0 0 200px; margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #5B5763">02 · PICKING PROCESS</p>
+<div style="flex: 1 1 520px; min-width: 0; max-width: 720px; display: flex; flex-direction: column; gap: 20px">
+<h3 style="margin: 0; font-size: 25px; line-height: 1.3; letter-spacing: -0.02em; font-weight: 500">Faster picking, with a cleaner list.</h3>
+<div style="display: flex; flex-direction: column; gap: 18px"><div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">ONE OR MORE CUSTOMERS AT ONCE</p><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #2A2A2E">Shoppers got faster when they could pick the “fruits and vegetables” for both customers at the same time.</p></div><div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">A CLEANER LIST AND PRODUCT DETAIL</p><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #2A2A2E">A better hierarchy for the description, the customer’s preferences, quantity and unit price, and the PLU (store code).</p></div><div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">A NEW “PENDING” TAB</p><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #2A2A2E">The customer’s approval is needed to check out when a shopper adds a new product, or when a replacement has a different price than the one in the app.</p></div></div>
+</div>
+</div>
+<figure class="rp-fig" style="margin: 0; max-width: 1000px; width: 100%; align-self: center"><div style="display: flex; flex-wrap: wrap; gap: 24px 40px; align-items: center; justify-content: center"><div style="flex: 0 1 360px; min-width: 0"><img src="media/g-list2.jpg" alt="Shopping list for two orders, grouped by aisle, with the customer comments and To do, In review, Done and Status tabs" loading="lazy" style="display: block; width: 100%; height: auto; "></div><div style="flex: 0 1 300px; min-width: 0"><img src="media/g-detail2.jpg" alt="Product detail with the customer preference, unit price, EAN and PLU, and Found or Not found actions" loading="lazy" style="display: block; width: 100%; height: auto; "></div></div></figure>
+</section>
+<section style="padding: 56px 0; border-top: 1px solid #E4E2E6; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; gap: 20px 72px">
+<p style="flex: 0 0 200px; margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #5B5763">03 · FEEDBACK</p>
+<div style="flex: 1 1 520px; min-width: 0; max-width: 720px; display: flex; flex-direction: column; gap: 20px">
+<h3 style="margin: 0; font-size: 25px; line-height: 1.3; letter-spacing: -0.02em; font-weight: 500">Live notifications instead of chat.</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">To help shoppers make confident decisions, we replaced the customer-shopper chat with a toast notification system, and gave shoppers visibility of what the customer decided.</p>
+</div>
+</div>
+<figure class="rp-fig" style="margin: 0; max-width: 1000px; width: 100%; align-self: center"><div style="display: flex; flex-wrap: wrap; gap: 24px 40px; align-items: center; justify-content: center"><div style="flex: 0 1 300px; min-width: 0"><img src="media/g-fb-list.jpg" alt="The order list after the customer was notified about a replacement" loading="lazy" style="display: block; width: 100%; height: auto; "></div><div style="flex: 0 1 300px; min-width: 0"><img src="media/g-fb-card.jpg" alt="The replacement the customer chose, with its details and Found or Not found actions" loading="lazy" style="display: block; width: 100%; height: auto; "></div><div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 18px"><div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">AVAILABILITY</p><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #2A2A2E">The product is out of stock, and what to do about it.</p></div><div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">THE CUSTOMER’S CHOICE</p><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #2A2A2E">The product the customer chose. This affects GMV and customer satisfaction.</p></div><div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">NOT FOUND</p><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #2A2A2E">If the replacement isn’t available, the shopper can choose another one, and the customer is notified to approve it.</p></div></div></div><div style="margin-top: 32px"><div style="display: flex; flex-wrap: wrap; gap: 24px 40px; align-items: center; justify-content: center"><div style="flex: 0 1 640px; min-width: 0"><img src="media/g-fb-states2.jpg" alt="Replacement approved and replacement rejected, each with the notification the shopper receives" loading="lazy" style="display: block; width: 100%; height: auto; "></div></div></div></figure>
 </section>
 
 <a class="cs-next" href="#case-companion"><span>Next case</span><span class="cs-ar" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
