@@ -136,6 +136,11 @@ section[id],footer[id]{scroll-margin-top:84px}
 @supports (animation-timeline: scroll()){@keyframes csIn{from{opacity:0;transform:translateY(16px);visibility:hidden}to{opacity:1;transform:none;visibility:visible}}.cs-next{animation:csIn linear both;animation-timeline:scroll(root);animation-range:320px 520px}}
 @media (max-width:560px){.cs-next{right:16px;bottom:16px;font-size:14px;padding-left:14px}.cs-x{display:none}}
 @media (prefers-reduced-motion: reduce){.cs-next .cs-ar{transition:none}}
+@media (max-width:640px){.cc-row{flex-direction:column}.cc-loop{aspect-ratio:3 / 4;flex:none !important}}
+@keyframes ccA{0%,30%{opacity:1}34%,96%{opacity:0}100%{opacity:1}}
+@keyframes ccB{0%,30%{opacity:0}34%,63%{opacity:1}67%,100%{opacity:0}}
+@keyframes ccC{0%,63%{opacity:0}67%,96%{opacity:1}100%{opacity:0}}
+.cc-s1{opacity:1;animation:ccA 9s ease-in-out infinite}.cc-s2{opacity:0;animation:ccB 9s ease-in-out infinite}.cc-s3{opacity:0;animation:ccC 9s ease-in-out infinite}
 .rc-range{-webkit-appearance:none;appearance:none;background:transparent;cursor:ew-resize}
 @keyframes rcClip{0%,18%{clip-path:inset(0 0 0 88%)}46%,68%{clip-path:inset(0 0 0 12%)}92%,100%{clip-path:inset(0 0 0 88%)}}
 @keyframes rcHandle{0%,18%{left:88%}46%,68%{left:12%}92%,100%{left:88%}}
@@ -470,9 +475,9 @@ section[id],footer[id]{scroll-margin-top:84px}
 <div style="padding: 24px 20px; border-radius: 16px; background: #F1EFEC">
 <div style="display: flex; flex-direction: column; gap: 10px">
 <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">CALLS</span>
-<img src="media/callbar-tight.png" alt="The call bar, close up: caller, Mute, Hold, Transfer, Record, AI On, Share, Park and End Call in one bar" style="display: block; width: 85%; height: auto; border-radius: 6px">
+<img src="media/bar-calls2.png" alt="The call bar, close up: caller, Mute, Hold, Transfer, Record, AI On, Share, Park and End Call in one bar" style="display: block; width: 100%; height: auto">
 <span style="margin-top: 18px; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #5B5763">MEETINGS</span>
-<img src="media/meetings-bar.png" alt="The meetings bar: Details, Chat, Participants and AI on, then Mute, Stop video, Screen share, Reactions and More, then Stop, Host and Leave" style="display: block; width: 100%; height: auto; border-radius: 6px">
+<img src="media/bar-meetings2.png" alt="The meetings bar: Details, Chat, Participants and AI on, then Mute, Stop video, Screen share, Reactions and More, then Stop, Host and Leave" style="display: block; width: 100%; height: auto">
 </div>
 </div>
 <figcaption style="font-size: 15px; color: #5B5763">Calls and meetings share the same pattern: controls in the center, AI on one tap away, and the end action always in the same place.</figcaption>
@@ -493,9 +498,21 @@ section[id],footer[id]{scroll-margin-top:84px}
 <div style="flex: 1 1 520px; min-width: 0; max-width: 720px; display: flex; flex-direction: column; gap: 32px">
 <p style="margin: 0; font-size: 25px; line-height: 1.3; letter-spacing: -0.02em; font-weight: 500">A concept in an hour, then many iterations in code.</p>
 <p style="margin: -12px 0 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">I built the first concept prototype in about an hour and kept iterating on it. It made every conversation with stakeholders and design leadership richer: they could try where the product was going, not just hear about it.</p>
+<p style="margin: 0 0 -8px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93">CONCEPTS · EXPLORATIONS, NOT THE SHIPPED PRODUCT</p>
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A2E">Prototype settings switch between V1 and V2, compact and full views, and each feature on or off: AI, playbook, live coach and Salesforce.</p>
-<video src="media/companion-prototype.mp4" autoplay="" muted="" loop="" playsinline="" aria-label="Coded Companion prototype: a floating call view with mute, hold, transfer and AI, beside a settings panel that switches versions, views and features" style="display: block; width: 100%; height: auto; aspect-ratio: 1400 / 1086; border-radius: 12px; background: #F6F4F2"></video>
+<div class="cc-row" style="display: flex; gap: 16px; align-items: stretch">
+<video src="media/companion-concept.mp4" autoplay="" muted="" loop="" playsinline="" aria-label="Early concept: the floating call view grows from a compact bar to full controls and a live transcript, then shrinks back" style="flex: 453 1 0; min-width: 0; display: block; width: 100%; height: auto; aspect-ratio: 1080 / 998; border-radius: 12px; background: #E9E4DD"></video>
+<div class="cc-loop" style="flex: 251 1 0; min-width: 0; position: relative; aspect-ratio: 251 / 419; align-self: center">
+<div class="cc-sl cc-s1" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93">BEFORE THE CALL</span><img src="media/cc-home.png" alt="Concept: Companion home with Start a new call, Start recording voice notes and Ask Dialpad" style="flex: 1 1 0; min-height: 0; width: 100%; object-fit: contain; display: block"></div>
+<div class="cc-sl cc-s2" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93">INCOMING CALL</span><img src="media/cc-incoming.png" alt="Concept: incoming call from a contact center customer, with Decline and Accept" style="flex: 1 1 0; min-height: 0; width: 100%; object-fit: contain; display: block"></div>
+<div class="cc-sl cc-s3" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93">AFTER THE CALL</span><img src="media/cc-recap.png" alt="Concept: the AI Recap after the call, with summary, topics and action items" style="flex: 1 1 0; min-height: 0; width: 100%; object-fit: contain; display: block"></div>
+</div>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.45; color: #5B5763">One floating view that grows with the call, and the moments around it: before (start a call, record a voice note or ask Dialpad), the incoming call, and after (the AI Recap, ready to share).</p>
+<div class="cc-row" style="margin-top: 20px; display: flex; gap: 16px; align-items: center">
+<video src="media/companion-concept2.mp4" autoplay="" muted="" loop="" playsinline="" aria-label="Concept: a slim side bar during the call opens the live transcript and Ask Dialpad Assistant, which summarizes the call so far" style="flex: 453 1 0; min-width: 0; display: block; width: 100%; height: auto; aspect-ratio: 932 / 770; border-radius: 12px; background: #F9F7F5; border: 1px solid #ECEAEE"></video>
+<p style="flex: 251 1 0; min-width: 0; margin: 0; font-size: 15px; line-height: 1.45; color: #5B5763">A slimmer take: a side bar that opens the live transcript and Ask Dialpad Assistant, to get a summary of the call so far or what to say next.</p>
+</div>
 </figure>
 </div>
 </section>
