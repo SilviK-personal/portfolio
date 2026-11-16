@@ -42,20 +42,26 @@ a{color:#111113}a:hover{color:#4B3FA0}
 .lab-books:hover .lab-s5{transform:rotate(38deg) translate(110px,-16px)}
 .lab-books:hover .lab-s6{transform:rotate(-10deg) translate(30px,-66px)}
 @media (prefers-reduced-motion: reduce){.lab-item,.lab-sheet{transition:none}}
-.hc-stage{position:relative;width:340px;height:320px;flex:0 0 auto;transform:scale(.6)}
-.hc-el{position:absolute;left:50%;top:50%;box-sizing:border-box;background:#FFFFFF;border:1.5px solid #DCDADF;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
-.hc-phone{width:150px;height:260px;margin:-130px 0 0 -75px;border-radius:24px;transform:rotate(-8deg)}
-.hc-b1{width:124px;height:44px;margin:-22px 0 0 -62px;border-radius:14px;transform:translate(92px,-78px) rotate(6deg)}
-.hc-b2{width:110px;height:44px;margin:-22px 0 0 -55px;border-radius:14px;transform:translate(-100px,44px) rotate(-10deg)}
-.hc-ring{width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;transform:translate(96px,88px)}
-.hc-pulse{stroke-dasharray:320;stroke-dashoffset:0}
-@keyframes hcDraw{from{stroke-dashoffset:320}to{stroke-dashoffset:0}}
-.lab-hc:hover .hc-phone{transform:rotate(0deg) translateY(-6px)}
-.lab-hc:hover .hc-b1{transform:translate(118px,-112px) rotate(10deg)}
-.lab-hc:hover .hc-b2{transform:translate(-136px,72px) rotate(-14deg)}
-.lab-hc:hover .hc-ring{transform:translate(128px,116px) scale(1.12)}
-.lab-hc:hover .hc-pulse{animation:hcDraw 1.2s ease-out}
-@media (prefers-reduced-motion: reduce){.hc-el{transition:none}.lab-hc:hover .hc-pulse{animation:none}}
+.hc-voice{position:relative;z-index:2;width:min(268px,88%);margin-top:24px;display:flex;flex-direction:column;align-items:center;gap:10px;font-family:'DM Sans',sans-serif}
+.hc-row{display:flex;align-items:center;gap:12px}
+.hc-wave{display:flex;align-items:center;gap:3px;height:36px}
+.hc-wave i{display:block;width:3px;border-radius:2px;background:#B9B5BF;transform-origin:center}
+.hc-mic{position:relative;width:52px;height:52px;flex:0 0 52px;border-radius:50%;background:#121C3B;display:flex;align-items:center;justify-content:center}
+.hc-mic::before,.hc-mic::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid #4B3FA0;opacity:0}
+.hc-said{margin:0;font-size:13px;color:#5B5763;font-style:italic}
+.hc-card{align-self:stretch;padding:10px 12px;background:#FFFFFF;border:1.5px solid #DCDADF;border-radius:14px;box-shadow:0 8px 20px rgba(27,21,48,.06);font-size:13px;line-height:1.35;color:#2A2A2E}
+.hc-bar{margin-top:8px;display:flex;align-items:center;gap:8px}
+.hc-track{flex:1;height:6px;border-radius:999px;background:#ECEAEE;overflow:hidden}
+.hc-fill{display:block;height:100%;width:68%;border-radius:999px;background:#4B3FA0}
+.hc-pct{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;color:#4B3FA0}
+@keyframes hcFill{from{width:0}to{width:68%}}
+@keyframes hcWave{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+@keyframes hcRing{from{transform:scale(1);opacity:.6}to{transform:scale(1.7);opacity:0}}
+.lab-hc:hover .hc-fill{animation:hcFill 1.2s cubic-bezier(.2,.8,.2,1)}
+.lab-hc:hover .hc-wave i{animation:hcWave .9s ease-in-out infinite;background:#4B3FA0}
+.lab-hc:hover .hc-wave i:nth-child(2n){animation-delay:.15s}.lab-hc:hover .hc-wave i:nth-child(3n){animation-delay:.3s}.lab-hc:hover .hc-wave i:nth-child(5n){animation-delay:.45s}
+.lab-hc:hover .hc-mic::before{animation:hcRing 1.4s ease-out infinite}.lab-hc:hover .hc-mic::after{animation:hcRing 1.4s ease-out .7s infinite}
+@media (prefers-reduced-motion: reduce){.lab-hc:hover .hc-fill,.lab-hc:hover .hc-wave i,.lab-hc:hover .hc-mic::before,.lab-hc:hover .hc-mic::after{animation:none}}
 .sk-card{position:relative;outline:none}
 .sk-file{position:relative;z-index:2;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
 .sk-chip{position:absolute;left:50%;top:50%;z-index:1;width:128px;height:32px;margin:-16px 0 0 -64px;padding:0 10px;box-sizing:border-box;display:flex;align-items:center;gap:7px;background:#FFFFFF;border:1.5px solid #DCDADF;border-radius:9px;box-shadow:0 8px 20px rgba(27,21,48,.07);font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;color:#3F3D45;white-space:nowrap;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .4s;opacity:0}
@@ -120,6 +126,7 @@ section[id],footer[id]{scroll-margin-top:84px}
 .ct-copy{transition:border-color .2s,color .2s}.ct-copy:hover{border-color:#121C3B;color:#121C3B}
 .btn-primary svg{transition:transform .2s}.btn-primary:hover svg,.btn-primary:focus-visible svg{transform:translateY(3px)}@media (prefers-reduced-motion: reduce){.btn-primary svg{transition:none}}
 .btn-primary{transition:background-color .2s}.btn-primary:hover{background:#22305E;color:#FFFFFF}.btn-secondary{transition:color .2s,border-color .2s}.btn-secondary:hover,.btn-secondary:focus-visible{color:#4B3FA0 !important;border-bottom-color:#4B3FA0 !important}
+.hw-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(5,auto);column-gap:48px!important;row-gap:0!important}.hw-col{grid-row:span 5;display:grid!important;grid-template-rows:subgrid;gap:0!important}.hw-col>p{margin-bottom:12px!important}.hw-ul{display:contents}@media (max-width:700px){.hw-grid{grid-template-columns:1fr;grid-template-rows:none;row-gap:32px!important}.hw-col{grid-row:auto;display:flex!important;grid-template-rows:none}.hw-ul{display:block}}
 .ph{display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;box-sizing:border-box;border:1.5px dashed #CFCBD4;border-radius:12px;background:#F3F1EF;color:#5B5763;font-size:15px;line-height:1.5}
 .sk-hdr-case .sk-av{animation:none !important;opacity:1;transform:none}.sk-hdr-case .sk-mono{animation:none !important;opacity:0}
 .rc-range{-webkit-appearance:none;appearance:none;background:transparent;cursor:ew-resize}
@@ -207,14 +214,14 @@ section[id],footer[id]{scroll-margin-top:84px}
 <section id="about" style="padding: 78px 0; border-top: 1px solid #E4E2E6">
 <p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; color: #5B5763">LEADERSHIP</p>
 <h2 style="margin: 16px 0 0; max-width: 900px; font-size: clamp(28px, 3.4vw, 48px); line-height: 1.08; font-weight: 400; letter-spacing: -0.035em; text-wrap: balance"><span style="color: #8E8A93">I’ve led design for whole lines of business,</span> and built the teams to do it.</h2>
-<p style="margin: 24px 0 0; max-width: 720px; font-size: 18px; line-height: 1.55; color: #2A2A2E">6 years at Dialpad and Rappi, across B2B SaaS and B2C. Alignment and shared context are how my teams move faster with quality.</p>
+<p style="margin: 24px 0 0; max-width: 720px; font-size: 18px; line-height: 1.55; color: #2A2A2E">10+ years designing products, the last 6 leading teams at Dialpad and Rappi, across B2B SaaS and B2C. Alignment and shared context are how my teams move faster with quality.</p>
 <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 24px">
 <div style="flex: 1 1 420px; min-width: 0; padding: 28px; background: #FFFFFF; border: 1px solid #E4E2E6; border-radius: 20px; display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px"><span style="font-size: 20px; font-weight: 600; letter-spacing: -0.01em">Dialpad · Product Design Manager</span><span style="font-size: 14px; color: #8E8A93">2023 – 2026</span></div>
 <div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px">
 <div><span style="display: block; font-size: clamp(48px, 5vw, 72px); font-weight: 300; letter-spacing: -0.05em; line-height: 1; color: #121C3B">1<span style="color: #C9CBD6">→</span>9</span><span style="display: block; margin-top: 8px; font-size: 15px; color: #3F3D45">designers on my team</span></div>
 <div class="st-div" aria-hidden="true"></div>
-<div><span style="display: block; font-size: clamp(48px, 5vw, 72px); font-weight: 300; letter-spacing: -0.05em; line-height: 1; color: rgb(180, 184, 199)">12<span style="color: rgb(221, 223, 230)">→</span>35+</span><span style="display: block; margin-top: 8px; font-size: 15px; color: rgb(63, 61, 69)">design org I helped scale</span></div>
+<div><span style="display: block; font-size: clamp(48px, 5vw, 72px); font-weight: 300; letter-spacing: -0.05em; line-height: 1; color: rgb(180, 184, 199)">12<span style="color: rgb(221, 223, 230)">→</span>30+</span><span style="display: block; margin-top: 8px; font-size: 15px; color: rgb(63, 61, 69)">design org I helped scale</span></div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 14px">
 <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93">SCOPE · DIALPAD CONNECT</p>
@@ -235,21 +242,24 @@ section[id],footer[id]{scroll-margin-top:84px}
 </div>
 </div>
 </div>
-<div style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 32px 48px">
-<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 20px 0 0; font-size: 15px; line-height: 1.5; color: #5B5763"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93; margin-right: 10px">EARLIER</span>Sr. Product Designer at Iunigo<span aria-hidden="true" style="color: #C9CBD6"> · </span>3+ years as Service Designer at the Cultural Innovation Lab, Argentina’s Ministry of Culture</p>
+<div class="hw-grid" style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 32px 48px">
+<div class="hw-col" style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
 <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93">ACROSS TEAMS &amp; STAKEHOLDERS</p>
-<ul style="list-style: none; margin: 0; padding: 0">
+<ul class="hw-ul" style="list-style: none; margin: 0; padding: 0">
 <li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Member of the design leadership team</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: #3F3D45">At Dialpad, one of the leads shaping the design org, with the Design System, Design Ops and Brand leads.</span></li>
 <li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Design’s voice at the table</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: #3F3D45">At Dialpad, with the Sr. Product Director, PMs and Engineering, and checkpoints with executive stakeholders. At Rappi, priorities with founders and VPs.</span></li>
 <li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">The big picture</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: #3F3D45">Seeing how projects connect across areas and talking with the teams they touch. A design system as one experience, not just UI.</span></li>
+<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Sprints and hackathons</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: #3F3D45">Trained Design Sprint facilitator. I organize hackathons to keep experimentation part of how teams work.</span></li>
 </ul>
 </div>
-<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div class="hw-col" style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
 <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: #8E8A93">IN THE DAILY WORK</p>
-<ul style="list-style: none; margin: 0; padding: 0">
-<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Craft at speed</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: rgb(63, 61, 69)">Weekly design reviews, presentations and working sessions. High standards of craft, balanced with speed and execution.</span></li>
+<ul class="hw-ul" style="list-style: none; margin: 0; padding: 0">
+<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Craft at speed</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: rgb(63, 61, 69)">Weekly design reviews with leadership, presentations and working sessions. High standards of craft, balanced with speed and execution.</span></li>
 <li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Prototypes in code</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: #3F3D45">Still hands-on: a first concept in about an hour, then many iterations stakeholders could try.</span></li>
 <li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Agents and skills</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: #3F3D45">A design skills library for the team, and agents I built to automate tasks across the process.</span></li>
+<li style="padding: 14px 0; border-top: 1px solid #ECEAEE"><span style="display: block; font-size: 17px; font-weight: 600">Paper-cut fixes in code</span><span style="display: block; margin-top: 4px; font-size: 15px; line-height: 1.5; color: rgb(63, 61, 69)">I ship small, medium UX fixes straight to production.&nbsp;</span></li>
 </ul>
 </div>
 </div>
@@ -260,10 +270,10 @@ section[id],footer[id]{scroll-margin-top:84px}
 <p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; color: #5B5763">LABS</p>
 <h2 style="margin: 16px 0 0; max-width: 100%; font-size: clamp(23px, 2.65vw, 34px); line-height: 1.15; font-weight: 400; letter-spacing: -0.03em; text-wrap: balance">A free space for experiments I build with AI.</h2>
 <p style="margin: 16px 0 0; max-width: 100%; font-size: 17px; line-height: 1.55; color: #3F3D45; text-wrap: pretty">When you can build almost anything you imagine, what matters is curiosity and making time to experiment. It's not always easy, but I love reading and trying new things.</p>
-<div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 24px">
+<div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 40px 32px">
 
-<div class="sk-card" tabindex="0" aria-label="Agents and skills created: skills.md with GM-brief.md, pr-create.md, AskEng.md, report.md and AskDP.md" style="flex: 1 1 300px; min-width: 0; padding: 22px; background: #FFFFFF; border: 1px solid #E4E2E6; border-radius: 20px; display: flex; flex-direction: column; gap: 20px">
-<div class="lab-board" style="position: relative; height: 240px; border: 1px solid #ECEAEE; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden">
+<div class="sk-card" tabindex="0" aria-label="Agents and skills: skills.md with GM-brief.md, pr-create.md, AskEng.md, report.md and AskDP.md" style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<div class="lab-board" style="position: relative; height: 240px; border: 1px solid #E4E2E6; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden">
 <span style="position: absolute; top: 12px; left: 12px; z-index: 3; padding: 3px 9px; background: #FFFFFF; border: 1px solid #E4E2E6; border-radius: 999px; font-size: 12px; font-weight: 500; color: #5B5763; white-space: nowrap">Work and personal</span>
 <div aria-hidden="true" style="position: absolute; inset: 0">
 <div class="sk-chip sk-c1"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8E8A93" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5"></path></svg><span>GM-brief.md</span></div>
@@ -277,34 +287,32 @@ section[id],footer[id]{scroll-margin-top:84px}
 <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 500; color: #111113">skills.md</p>
 </div>
 </div>
-<div style="padding: 0 4px; display: flex; flex-direction: column; gap: 8px">
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px"><p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.45; font-weight: 500; letter-spacing: 0.2em; color: #111113">AGENTS AND SKILLS CREATED</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px"><p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.45; font-weight: 500; letter-spacing: 0.2em; color: #111113">AGENTS &amp; SKILLS</p></div>
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #5B5763">Time back with the skills I built for my day to day.</p>
 </div>
 </div>
 
-<div class="lab-hc" style="flex: 1 1 300px; min-width: 0; padding: 22px; background: #FFFFFF; border: 1px solid #E4E2E6; border-radius: 20px; display: flex; flex-direction: column; gap: 20px">
-<div class="lab-board" style="position: relative; height: 240px; border: 1px solid #ECEAEE; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden">
-<span style="position: absolute; top: 12px; left: 12px; z-index: 3; padding: 3px 9px; border: 1px solid #DCD5FA; background: #EDE8FF; border-radius: 999px; font-size: 12px; font-weight: 600; color: #4B3FA0; white-space: nowrap">10K run achieved!</span>
-<div class="hc-stage" aria-hidden="true">
-<div class="hc-el hc-ring"></div>
-<div class="hc-el hc-phone" style="display: flex; align-items: center; justify-content: center">
-<svg width="110" height="60" viewBox="0 0 110 60" fill="none"><polyline class="hc-pulse" points="0,32 28,32 38,12 50,50 60,22 68,32 110,32" stroke="#C9C6CD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>
-</div>
-<div class="hc-el hc-b1"></div>
-<div class="hc-el hc-b2"></div>
+<div class="lab-hc" style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<div class="lab-board" style="position: relative; height: 240px; border: 1px solid #E4E2E6; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden">
+<span style="position: absolute; top: 12px; left: 12px; z-index: 3; padding: 3px 9px; border: 1px solid #DCD5FA; background: #EDE8FF; border-radius: 999px; font-size: 12px; font-weight: 600; color: #4B3FA0; white-space: nowrap">10K challenge</span>
+<div class="hc-voice" aria-hidden="true">
+<div class="hc-row"><span class="hc-wave"><i style="height: 10px"></i><i style="height: 18px"></i><i style="height: 28px"></i><i style="height: 14px"></i><i style="height: 24px"></i><i style="height: 34px"></i><i style="height: 20px"></i></span><span class="hc-mic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg></span><span class="hc-wave"><i style="height: 30px"></i><i style="height: 16px"></i><i style="height: 26px"></i><i style="height: 36px"></i><i style="height: 18px"></i><i style="height: 24px"></i><i style="height: 12px"></i></span></div>
+<p class="hc-said">“Ran 6.8 km this morning”</p>
+<div class="hc-card">Nice pace! You’re at 68% of your challenge.<div class="hc-bar"><span class="hc-track"><span class="hc-fill"></span></span><span class="hc-pct">68%</span></div></div>
 </div>
 </div>
-<div style="padding: 0 4px; display: flex; flex-direction: column; gap: 8px">
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px"><p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.45; font-weight: 500; letter-spacing: 0.2em; color: #111113">PERSONAL HEALTH COACH</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px"><p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.45; font-weight: 500; letter-spacing: 0.2em; color: #111113">MY HEALTH COACH</p></div>
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #5B5763">Conversational experience for everyday workout and health habits.</p>
 </div>
 </div>
 
-<div class="lab-id" style="flex: 1 1 300px; min-width: 0; padding: 22px; background: #FFFFFF; border: 1px solid #E4E2E6; border-radius: 20px; display: flex; flex-direction: column; gap: 20px">
-<div class="lab-board" style="position: relative; height: 240px; border: 1px solid #ECEAEE; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden">
+<div class="lab-id" style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<div class="lab-board" style="position: relative; height: 240px; border: 1px solid #E4E2E6; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden">
 <span style="position: absolute; top: 12px; left: 12px; z-index: 3; padding: 3px 9px; background: #FFFFFF; border: 1px solid #E4E2E6; border-radius: 999px; font-size: 12px; font-weight: 500; color: #5B5763; white-space: nowrap">Hobby</span>
 <svg aria-hidden="true" width="188" height="180" viewBox="0 0 240 230" fill="none" style="max-width: 100%; height: auto; overflow: visible">
+<g class="id-box" fill="none" stroke="#C9C6CD" stroke-width="1"><path d="M40 200 L100 224 L160 200 L100 176 Z" fill="#F3F1F4" stroke="none"></path><path d="M40 200 L100 176 L160 200 M100 176 L100 6" stroke-dasharray="3 4"></path><path d="M40 200 L40 30 M160 200 L160 30 M40 30 L100 6 L160 30"></path></g>
 <g class="id-l id-l0"><ellipse cx="100" cy="176" rx="44" ry="13.2" fill="#FFFFFF" stroke="#3F3D45" stroke-width="1.5"></ellipse></g>
 <g class="id-l id-l1"><ellipse cx="100" cy="163" rx="50" ry="15.0" fill="#FFFFFF" stroke="#3F3D45" stroke-width="1.5"></ellipse></g>
 <g class="id-l id-l2"><ellipse cx="100" cy="150" rx="54" ry="16.2" fill="#FFFFFF" stroke="#3F3D45" stroke-width="1.5"></ellipse></g>
@@ -315,11 +323,12 @@ section[id],footer[id]{scroll-margin-top:84px}
 <g class="id-l id-l7"><ellipse cx="100" cy="85" rx="30" ry="9.0" fill="#FFFFFF" stroke="#3F3D45" stroke-width="1.5"></ellipse></g>
 <g class="id-l id-l8"><ellipse cx="100" cy="72" rx="34" ry="10.2" fill="#FFFFFF" stroke="#3F3D45" stroke-width="1.5"></ellipse></g>
 <g class="id-l id-l9"><ellipse cx="100" cy="59" rx="40" ry="12.0" fill="#FFFFFF" stroke="#3F3D45" stroke-width="1.5"></ellipse></g>
+<g class="id-box" fill="none" stroke="#C9C6CD" stroke-width="1"><path d="M40 200 L100 224 L160 200 M100 224 L100 54 M40 30 L100 54 L160 30"></path></g><g font-family="IBM Plex Mono, monospace" font-size="10" stroke-width="1.4" stroke-linecap="round"><path d="M40 200 L40 174" stroke="#3F3D45"></path><text x="28" y="172" fill="#5B5763" stroke="none">Z</text><path d="M40 200 L62 209" stroke="#3F3D45"></path><text x="56" y="222" fill="#5B5763" stroke="none">X</text><path d="M40 200 L62 191" stroke="#3F3D45"></path><text x="66" y="190" fill="#5B5763" stroke="none">Y</text><circle cx="40" cy="200" r="2.2" fill="#3F3D45" stroke="none"></circle></g>
 <g class="id-dim" stroke="#8E8A93" stroke-width="1"><path d="M172 42v148"></path><path d="M166 42h12"></path><path d="M166 190h12"></path></g><text class="id-dim" x="182" y="120" font-family="IBM Plex Mono, monospace" font-size="11" fill="#8E8A93">120 mm</text>
 </svg>
 </div>
-<div style="padding: 0 4px; display: flex; flex-direction: column; gap: 8px">
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px"><p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.45; font-weight: 500; letter-spacing: 0.2em; color: #111113">FLIPPING ARCHITECTURE AND 3D DESIGN</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px"><p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.45; font-weight: 500; letter-spacing: 0.2em; color: #111113">INTERIORS &amp; 3D</p></div>
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #5B5763">Still loving my industrial design roots.</p>
 </div>
 </div>
@@ -330,7 +339,7 @@ section[id],footer[id]{scroll-margin-top:84px}
 <!-- Contact -->
 <footer id="contact" style="padding: 72px 0 48px; border-top: 1px solid #E4E2E6">
 <h2 style="margin: 0; font-size: clamp(31px, 3.9vw, 56px); line-height: 1.05; font-weight: 400; letter-spacing: -0.04em">Let’s talk.</h2>
-<p style="margin: 20px 0 0; max-width: 100%; font-size: 18px; line-height: 1.55; color: #3F3D45; text-wrap: pretty">Always up for a conversation about AI products, scaling design teams or prototyping in code. Open to full-time and fractional roles.</p>
+<p style="margin: 20px 0 0; max-width: 100%; font-size: 18px; line-height: 1.55; color: #3F3D45; text-wrap: pretty">Always up for a conversation about AI products, scaling design teams or prototyping in code.&nbsp;</p>
 <div style="margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px">
 <details class="ct-mailbox">
 <summary class="ct-write" style="display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 0 20px; border-radius: 999px; background: #121C3B; color: #FFFFFF; font-size: 15px; font-weight: 500; cursor: pointer; list-style: none"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>Write me</summary>
